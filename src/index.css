@@ -1,0 +1,14 @@
+@import url(./vendor/normalize.css);
+@import url(./vendor/fonts/inter.css);
+
+@import url(./blocks/page/page.css);
+@import url(./blocks/cards/cards.css);
+@import url(./blocks/card/card.css);
+@import url(./blocks/card/__calendar/card__calendar.css);
+@import url(./blocks/submit/submit__form.css);
+@import url(./blocks/main/main__button.css);
+
+@import url(./components/Modal/Modal.css);
+@import url(./components/MobileAccountNavList/MobileAccountNavList.css);
+@import url(./components/MobileNavigation/MobileNavigation.css);
+@import url(./components/Rent/Rent.css);
