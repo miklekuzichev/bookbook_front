@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.69fcee9d.css",
-    "main.js": "/static/js/main.4115816f.js",
-    "static/js/453.53631151.chunk.js": "/static/js/453.53631151.chunk.js",
-    "static/media/OpenSans-ExtraBold.ttf": "/static/media/OpenSans-ExtraBold.e390d6021c37c9e132bf.ttf",
-    "static/media/OpenSans-Medium.ttf": "/static/media/OpenSans-Medium.be793100b2ab027d9b74.ttf",
-    "static/media/OpenSans-Bold.ttf": "/static/media/OpenSans-Bold.c790f99966352c531503.ttf",
-    "static/media/OpenSans-Medium.woff2": "/static/media/OpenSans-Medium.f1e5d51d9c0c59f332ca.woff2",
-    "static/media/OpenSans-ExtraBold.woff2": "/static/media/OpenSans-ExtraBold.5e10c438559ba44013f8.woff2",
-    "static/media/OpenSans-Bold.woff2": "/static/media/OpenSans-Bold.7f193c3ba6c0244203c4.woff2",
-    "index.html": "/index.html",
-    "static/media/icon__COLOR_icon-main.svg": "/static/media/icon__COLOR_icon-main.04be6e7fe56b156e7c4e68ccf278e4fc.svg",
-    "static/media/plus.svg": "/static/media/plus.a76c91d9b2fbb06d6140.svg",
-    "static/media/close-icon.svg": "/static/media/close-icon.7802ada29869b27375ce.svg",
-    "static/media/minus.svg": "/static/media/minus.e361150aace161498250.svg",
-    "main.69fcee9d.css.map": "/static/css/main.69fcee9d.css.map",
-    "main.4115816f.js.map": "/static/js/main.4115816f.js.map",
-    "453.53631151.chunk.js.map": "/static/js/453.53631151.chunk.js.map"
+    "main.css": "/bookbook_front/index.html/static/css/main.56ae81c1.css",
+    "main.js": "/bookbook_front/index.html/static/js/main.8e879699.js",
+    "static/js/453.53631151.chunk.js": "/bookbook_front/index.html/static/js/453.53631151.chunk.js",
+    "static/media/OpenSans-ExtraBold.ttf": "/bookbook_front/index.html/static/media/OpenSans-ExtraBold.e390d6021c37c9e132bf.ttf",
+    "static/media/OpenSans-Medium.ttf": "/bookbook_front/index.html/static/media/OpenSans-Medium.be793100b2ab027d9b74.ttf",
+    "static/media/OpenSans-Bold.ttf": "/bookbook_front/index.html/static/media/OpenSans-Bold.c790f99966352c531503.ttf",
+    "static/media/OpenSans-Medium.woff2": "/bookbook_front/index.html/static/media/OpenSans-Medium.f1e5d51d9c0c59f332ca.woff2",
+    "static/media/OpenSans-ExtraBold.woff2": "/bookbook_front/index.html/static/media/OpenSans-ExtraBold.5e10c438559ba44013f8.woff2",
+    "static/media/OpenSans-Bold.woff2": "/bookbook_front/index.html/static/media/OpenSans-Bold.7f193c3ba6c0244203c4.woff2",
+    "index.html": "/bookbook_front/index.html/index.html",
+    "static/media/icon__COLOR_icon-main.svg": "/bookbook_front/index.html/static/media/icon__COLOR_icon-main.04be6e7fe56b156e7c4e68ccf278e4fc.svg",
+    "static/media/plus.svg": "/bookbook_front/index.html/static/media/plus.bfbdaa8d0f60498317c7.svg",
+    "static/media/close-icon.svg": "/bookbook_front/index.html/static/media/close-icon.13948bf595ff10e1bdcc.svg",
+    "static/media/minus.svg": "/bookbook_front/index.html/static/media/minus.22ad1da2f4ec75f68916.svg",
+    "main.56ae81c1.css.map": "/bookbook_front/index.html/static/css/main.56ae81c1.css.map",
+    "main.8e879699.js.map": "/bookbook_front/index.html/static/js/main.8e879699.js.map",
+    "453.53631151.chunk.js.map": "/bookbook_front/index.html/static/js/453.53631151.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.69fcee9d.css",
-    "static/js/main.4115816f.js"
+    "static/css/main.56ae81c1.css",
+    "static/js/main.8e879699.js"
   ]
 }
