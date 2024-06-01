@@ -39,7 +39,7 @@
       display: flex;
       flex-direction: column;
       /*height: 50%;*/
-      min-width: 856px;
+      min-width: 960px;
       padding: 15px;
       /*padding: 25px 264px 92px 264px;*/
       background: #fff;
@@ -49,15 +49,14 @@
   
     .menu-modal__header {
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-between;
       flex: 1 10px;
     }
   
     .menu-modal__close_button {
-      width: 48px;
-      height: 48px;
-      
-      background-color: #EEF1FF;
+      width: 36px;
+      height: 36px;
+      background-color: #fff;
       background-image: url(../../images/close-icon.svg);
       background-position: center;
       background-repeat: no-repeat;
@@ -70,6 +69,44 @@
       cursor: pointer;
     }
   
+    .menu-modal__back_container {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      border: none;
+      background-color: #fff;
+    }
+
+    .menu-modal__back_container:hover {
+      cursor: pointer;
+    }
+
+    .menu-modal__back_text {
+      margin: 0;
+      padding: 5px 0 0 0;
+      font-family: 'Open Sans';
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 28px;
+      text-align: center;
+      color: #37489F;
+    }
+
+    .menu-modal__back_button {
+      padding: 0;
+      margin-top: 6px;
+      margin-left: 5px;
+      margin-right: 5px;
+      width: 24px;
+      height: 24px;
+      background-color: #fff;
+      background-image: url(../../images/base-marks.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      border: unset;
+    }
+
     @media screen and (max-width: 991px) {
       .menu-modal__content {
         min-width: 696px;

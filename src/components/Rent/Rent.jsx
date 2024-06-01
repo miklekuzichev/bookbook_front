@@ -1,11 +1,19 @@
 import React from 'react';
 import Modal from '../Modal/Modal';
-import MobileAccountNavList from '../MobileAccountNavList/MobileAccountNavList';
 import MobileNavigation from '../MobileNavigation/MobileNavigation';
 
 function Rent({
   isOpen,
   onClose,
+  onClick,
+  title,
+  subtitle,
+  placeHolderTextTel,
+  placeHolderTextName,
+  textButtonLeft,
+  textButtonRight,
+  showCalendar,
+  cards,
 }) {
 
   return (
@@ -15,7 +23,15 @@ function Rent({
       <Modal.Header/>
       <Modal.Body>
         <MobileNavigation
-          onModalClose={onClose}/>
+          cards={cards}
+          title={title}
+          subtitle={subtitle}
+          onClick={onClick}
+          showCalendar={showCalendar}
+          placeHolderTextTel={placeHolderTextTel}
+          placeHolderTextName={placeHolderTextName}
+          textButtonLeft={textButtonLeft}
+          textButtonRight={textButtonRight}/>
       </Modal.Body>
     </Modal>
   )

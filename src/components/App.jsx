@@ -10,8 +10,9 @@ import {
 import Main from './Main';
 import Card from './Card';
 import Rent from './Rent/Rent';
-
-
+import RentSubject from './RentSubject/RentSubject';
+import { config } from '../utils/utils.js';
+import { initialCards } from '../utils/cards.js';
 import api from '../utils/api.js';
 import { CurrentUserContext } from '../context/CurrentUserContext.js'
 
@@ -19,11 +20,24 @@ function App() {
 
   const [cards, setCards] = React.useState({});
   const [currentUser, setCurrentUser] = React.useState({}); // default value
- 
   const [rentIsOpen, setRentIsOpen] = React.useState(false);
+  const [rentSubjectIsOpen, setRentSubjectIsOpen] = React.useState(false);
+  const [showCalendar, setShowCalendar] = React.useState(false);
+
+  const toggleCalendar = () => {
+    setShowCalendar(!showCalendar);
+  };
 
   const setOpenRent = () => {
     setRentIsOpen(true);
+  };
+
+  const setOpenSubject = () => {
+    setRentSubjectIsOpen(true);
+  };
+
+  const setCloseSubjectRent = () => {
+    setRentSubjectIsOpen(false);
   };
 
   const setCloseRent = () => {
@@ -54,6 +68,7 @@ function App() {
           <Main
             cards={data}
             setOpenRent={setOpenRent}
+            setOpenSubject={setOpenSubject}
           />
         }
       />
@@ -61,13 +76,29 @@ function App() {
       path='/card/:id'
       element={<Card cards={data} />}
     />
-
-
     </Routes>
     {rentIsOpen && (
       <Rent
         isOpen={rentIsOpen}
         onClose={setCloseRent}
+        onClick={toggleCalendar}
+        showCalendar={showCalendar}
+        title={config.title}
+        cards={initialCards}
+        subtitle={config.subtitle}
+        placeHolderTextTel={config.placeHolderTextTel}
+        placeHolderTextName={config.placeHolderTextName}
+        textButtonLeft={config.textButtonLeft}
+        textButtonRight={config.textButtonRight}
+      />
+    )}
+    {rentSubjectIsOpen && (
+      <RentSubject
+        isOpen={rentSubjectIsOpen}
+        onClose={setCloseSubjectRent}
+        cards={initialCards}
+        setCloseSubjectRent={setCloseSubjectRent}
+        setOpenRent={setOpenRent}
       />
     )}
     </div>

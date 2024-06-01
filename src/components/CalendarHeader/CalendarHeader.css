@@ -1,0 +1,73 @@
+.calendar__header {
+    display: flex;
+    align-items: center;
+  }
+
+.calendar__header-left {
+    justify-content: left;
+}
+
+.calendar__header-right {
+    justify-content: right;
+}
+
+  .calendar__header-button_left {
+    padding: 0;
+    margin-top: 6px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    background-image: url(../../images/base-marks.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: unset;
+  }
+
+  .calendar__header-button_left:hover {
+    cursor: pointer;
+  }
+
+  .calendar__header-name {
+    font-family: 'Open Sans';
+    padding: 0;
+    margin: 0;
+    margin-top: 6px;
+    margin-left: 45px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+  }
+
+  .calendar__header-name_right {
+    font-family: 'Open Sans';
+    padding: 0;
+    margin: 0;
+    margin-top: 6px;
+    margin-right: 45px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+  }
+
+
+
+
+  .calendar__header-button_right {
+    padding: 0;
+    margin-top: 6px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    background-image: url(../../images/base-marks-right.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: unset;
+  }
+
+  .calendar__header-button_right:hover {
+    cursor: pointer;
+  }

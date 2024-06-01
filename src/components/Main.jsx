@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Main({cards, setOpenRent}) {
+function Main({cards, setOpenRent, setOpenSubject}) {
 
     //const data = Array.from( cards.data === undefined ? {}: cards.data.results);
     //console.log('cards.data ', cards.data === undefined ? true: false);
@@ -34,6 +34,13 @@ function Main({cards, setOpenRent}) {
                         onClick={setOpenRent}
                     >
                         Добавить слот
+                    </button>
+                    <button 
+                        type="button"
+                        class="main__button"
+                        onClick={setOpenSubject}
+                    >
+                        Добавить субьект записи
                     </button>
             </form>
         </>

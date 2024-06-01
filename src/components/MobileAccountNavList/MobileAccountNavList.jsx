@@ -33,8 +33,6 @@ const MobileAccountNavList = React.memo((props) => {
         {item.children}
       </Link>
     </li>
-
-
   ));
 
   return (

@@ -1,0 +1,53 @@
+.mobile-navigation__submit-button {
+    font-family: 'Open Sans';
+    width: 328px;
+    letter-spacing: -0.4px;
+    margin-bottom: 34px;
+    padding: 13px 16px 15px 16px;
+    color: #fff;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+    background-color: #ff9b63;
+    border: none;
+    border-radius: 12px;
+  }
+
+  .mobile-navigation__submit-button:hover {
+    cursor: pointer;
+    background-color: #f78b4e;
+  }
+
+  @media screen and (max-width: 991px) {
+    .mobile-navigation__submit-button {
+      width: 456px;
+    }
+  }
+
+
+  @media screen and (max-width: 767px) {
+    .mobile-navigation__submit-button {
+      width: 504px;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .mobile-navigation__submit-button {
+      width: 420px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .mobile-navigation__submit-button {
+      margin-bottom: 5px;
+      width: 256px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+     .mobile-navigation__input-registration {
+       width: 488px;
+     }
+}
+   
+

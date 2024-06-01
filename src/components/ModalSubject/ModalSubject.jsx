@@ -12,8 +12,8 @@ function Modal({
   return createPortal(
     <div
       className='menu-modal overlay'>
-      <div className='menu-modal__container'>
-        <div className='menu-modal__content'>
+      <div className='rent-subject-modal__container'>
+        <div className='rent-subject-modal__content'>
           <modalContext.Provider value={onClose}>
             {children}
           </modalContext.Provider>
@@ -28,22 +28,10 @@ Modal.Header = function ModalHeader(props) {
   const onClose = useContext(modalContext);
 
   return (
-    <header className='menu-modal__header'>
+    <header className='rent-subject-modal__header'>
       {props.children}
-      <button 
-        className='menu-modal__back_container'
-        title="перейти на предыдущую страницу"
-        onClick={onClose}
-      >
-        <span
-          className='menu-modal__back_button'
-        ></span>
-        <p className='menu-modal__back_text'>Back</p>
-      </button>
-      
-
       <button
-        className='menu-modal__close_button'
+        className='rent-subject-modal__close_button'
         title="закрыть модальное окно"
         onClick={onClose}
       />
@@ -58,13 +46,5 @@ Modal.Body = function ModalBody(props) {
     </main>
   )
 }
-
-/*Modal.Footer = function ModalFooter(props) {
-  return (
-    <footer className='menu-modal__footer'>
-      {props.children}
-    </footer>
-  )
-}*/
 
 export default Modal;
