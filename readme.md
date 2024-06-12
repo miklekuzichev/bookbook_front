@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Сборка проекта
 
-* git clone [https://gitlab.com/Khrebtoa/bookbook_front.git](https://gitlab.com/Khrebtoa/bookbook_front.git)
+* git clone [https://github.com/miklekuzichev/bookbook_front.git](https://github.com/miklekuzichev/bookbook_front.git)
 * cd bookbook_front
 * npm install
 * npm start
@@ -15,7 +15,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 2. Склонировать репозиторий с фронтом, для этого ввести команду
 
-`git clone https://gitlab.com/Khrebtoa/bookbook_front.git`
+`git clone https://github.com/miklekuzichev/bookbook_front.git`
 
 4. Перейти в папку с клонированным проектом:
 
