@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/bookbook_front/static/css/main.07290089.css",
-    "main.js": "/bookbook_front/static/js/main.14eefc72.js",
+    "main.js": "/bookbook_front/static/js/main.c049473f.js",
     "static/js/453.53631151.chunk.js": "/bookbook_front/static/js/453.53631151.chunk.js",
     "static/media/OpenSans-ExtraBold.ttf": "/bookbook_front/static/media/OpenSans-ExtraBold.e390d6021c37c9e132bf.ttf",
     "static/media/OpenSans-Medium.ttf": "/bookbook_front/static/media/OpenSans-Medium.be793100b2ab027d9b74.ttf",
@@ -18,11 +18,11 @@
     "static/media/base-marks-right.svg": "/bookbook_front/static/media/base-marks-right.d87d5005cb320e7b61ef.svg",
     "static/media/base-marks.svg": "/bookbook_front/static/media/base-marks.899c867e99d2509ff597.svg",
     "main.07290089.css.map": "/bookbook_front/static/css/main.07290089.css.map",
-    "main.14eefc72.js.map": "/bookbook_front/static/js/main.14eefc72.js.map",
+    "main.c049473f.js.map": "/bookbook_front/static/js/main.c049473f.js.map",
     "453.53631151.chunk.js.map": "/bookbook_front/static/js/453.53631151.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.07290089.css",
-    "static/js/main.14eefc72.js"
+    "static/js/main.c049473f.js"
   ]
 }
