@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/bookbook_front/index.html/static/css/main.a6f6080f.css",
-    "main.js": "/bookbook_front/index.html/static/js/main.9f1e822b.js",
-    "static/js/453.53631151.chunk.js": "/bookbook_front/index.html/static/js/453.53631151.chunk.js",
-    "static/media/OpenSans-ExtraBold.ttf": "/bookbook_front/index.html/static/media/OpenSans-ExtraBold.e390d6021c37c9e132bf.ttf",
-    "static/media/OpenSans-Medium.ttf": "/bookbook_front/index.html/static/media/OpenSans-Medium.be793100b2ab027d9b74.ttf",
-    "static/media/OpenSans-Bold.ttf": "/bookbook_front/index.html/static/media/OpenSans-Bold.c790f99966352c531503.ttf",
-    "static/media/OpenSans-Medium.woff2": "/bookbook_front/index.html/static/media/OpenSans-Medium.f1e5d51d9c0c59f332ca.woff2",
-    "static/media/OpenSans-ExtraBold.woff2": "/bookbook_front/index.html/static/media/OpenSans-ExtraBold.5e10c438559ba44013f8.woff2",
-    "static/media/OpenSans-Bold.woff2": "/bookbook_front/index.html/static/media/OpenSans-Bold.7f193c3ba6c0244203c4.woff2",
-    "static/media/1_baydarka_naduvnaya_odissey_480.jpg": "/bookbook_front/index.html/static/media/1_baydarka_naduvnaya_odissey_480.59a30730995bf163080d.jpg",
-    "index.html": "/bookbook_front/index.html/index.html",
-    "static/media/plus.svg": "/bookbook_front/index.html/static/media/plus.a76c91d9b2fbb06d6140.svg",
-    "static/media/cross.svg": "/bookbook_front/index.html/static/media/cross.8188ed8153681540dbfc.svg",
-    "static/media/close-icon.svg": "/bookbook_front/index.html/static/media/close-icon.7802ada29869b27375ce.svg",
-    "static/media/minus.svg": "/bookbook_front/index.html/static/media/minus.e361150aace161498250.svg",
-    "static/media/base-marks-right.svg": "/bookbook_front/index.html/static/media/base-marks-right.d87d5005cb320e7b61ef.svg",
-    "static/media/base-marks.svg": "/bookbook_front/index.html/static/media/base-marks.899c867e99d2509ff597.svg",
-    "main.a6f6080f.css.map": "/bookbook_front/index.html/static/css/main.a6f6080f.css.map",
-    "main.9f1e822b.js.map": "/bookbook_front/index.html/static/js/main.9f1e822b.js.map",
-    "453.53631151.chunk.js.map": "/bookbook_front/index.html/static/js/453.53631151.chunk.js.map"
+    "main.css": "/bookbook_front/static/css/main.07290089.css",
+    "main.js": "/bookbook_front/static/js/main.14eefc72.js",
+    "static/js/453.53631151.chunk.js": "/bookbook_front/static/js/453.53631151.chunk.js",
+    "static/media/OpenSans-ExtraBold.ttf": "/bookbook_front/static/media/OpenSans-ExtraBold.e390d6021c37c9e132bf.ttf",
+    "static/media/OpenSans-Medium.ttf": "/bookbook_front/static/media/OpenSans-Medium.be793100b2ab027d9b74.ttf",
+    "static/media/OpenSans-Bold.ttf": "/bookbook_front/static/media/OpenSans-Bold.c790f99966352c531503.ttf",
+    "static/media/OpenSans-Medium.woff2": "/bookbook_front/static/media/OpenSans-Medium.f1e5d51d9c0c59f332ca.woff2",
+    "static/media/OpenSans-ExtraBold.woff2": "/bookbook_front/static/media/OpenSans-ExtraBold.5e10c438559ba44013f8.woff2",
+    "static/media/OpenSans-Bold.woff2": "/bookbook_front/static/media/OpenSans-Bold.7f193c3ba6c0244203c4.woff2",
+    "static/media/1_baydarka_naduvnaya_odissey_480.jpg": "/bookbook_front/static/media/1_baydarka_naduvnaya_odissey_480.59a30730995bf163080d.jpg",
+    "index.html": "/bookbook_front/index.html",
+    "static/media/plus.svg": "/bookbook_front/static/media/plus.a76c91d9b2fbb06d6140.svg",
+    "static/media/cross.svg": "/bookbook_front/static/media/cross.8188ed8153681540dbfc.svg",
+    "static/media/close-icon.svg": "/bookbook_front/static/media/close-icon.7802ada29869b27375ce.svg",
+    "static/media/minus.svg": "/bookbook_front/static/media/minus.e361150aace161498250.svg",
+    "static/media/base-marks-right.svg": "/bookbook_front/static/media/base-marks-right.d87d5005cb320e7b61ef.svg",
+    "static/media/base-marks.svg": "/bookbook_front/static/media/base-marks.899c867e99d2509ff597.svg",
+    "main.07290089.css.map": "/bookbook_front/static/css/main.07290089.css.map",
+    "main.14eefc72.js.map": "/bookbook_front/static/js/main.14eefc72.js.map",
+    "453.53631151.chunk.js.map": "/bookbook_front/static/js/453.53631151.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a6f6080f.css",
-    "static/js/main.9f1e822b.js"
+    "static/css/main.07290089.css",
+    "static/js/main.14eefc72.js"
   ]
 }
