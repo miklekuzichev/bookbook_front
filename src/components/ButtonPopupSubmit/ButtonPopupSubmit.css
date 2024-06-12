@@ -18,36 +18,22 @@
     background-color: #f78b4e;
   }
 
-  @media screen and (max-width: 991px) {
+  @media screen and (max-width: 1025px) {
     .mobile-navigation__submit-button {
       width: 456px;
+      margin-bottom: 40px;
     }
   }
 
-
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 760px) {
     .mobile-navigation__submit-button {
-      width: 504px;
-    }
-  }
-
-  @media screen and (max-width: 700px) {
-    .mobile-navigation__submit-button {
-      width: 420px;
+      width: 496px;
     }
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 575px) {
     .mobile-navigation__submit-button {
-      margin-bottom: 5px;
-      width: 256px;
+      margin-bottom: 51px;
+      width: 288px;
     }
 }
-
-@media screen and (max-width: 767px) {
-     .mobile-navigation__input-registration {
-       width: 488px;
-     }
-}
-   
-

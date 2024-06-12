@@ -30,29 +30,36 @@
     font-weight: 400;
   }
 
-  @media screen and (max-width: 991px) {
+  @media screen and (max-width: 1025px) {
     .mobile-navigation__data-input {
       width: 224px;
+      margin: 11px 0 15px 0;
     }
+
+    .mobile-navigation__data-input_text {
+      padding: 16px 0 16px 15px;
+
+    }
+
   }
   
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 760px) {
     .mobile-navigation__data-input {
-      width: 248px;
+      width: 244px;
     }
   }
   
   @media screen and (max-width: 700px) {
     .mobile-navigation__data-input {
       margin-bottom: 4px;
-      width: 206px;
+      width: 244px;
 
     }
   }
   
-  @media screen and (max-width: 520px) {
+  @media screen and (max-width: 575px) {
     .mobile-navigation__data-input {
-      width: 256px;
+      width: 140px;
     }
 
   }

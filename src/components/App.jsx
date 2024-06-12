@@ -1,17 +1,14 @@
-//import logo from './../logo.svg';
 import './../App.css';
 import React from 'react';
 import {
   Route,
   Routes,
-  useNavigate,
-  useLocation,
 } from 'react-router-dom';
 import Main from './Main';
 import Card from './Card';
 import Rent from './Rent/Rent';
 import RentSubject from './RentSubject/RentSubject';
-import { config } from '../utils/utils.js';
+import { config, nameMonth } from '../utils/utils.js';
 import { initialCards } from '../utils/cards.js';
 import api from '../utils/api.js';
 import { CurrentUserContext } from '../context/CurrentUserContext.js'
@@ -23,6 +20,9 @@ function App() {
   const [rentIsOpen, setRentIsOpen] = React.useState(false);
   const [rentSubjectIsOpen, setRentSubjectIsOpen] = React.useState(false);
   const [showCalendar, setShowCalendar] = React.useState(false);
+  const [selectFromToDate, setSelectFromToDate] = React.useState(false);
+  const [textButtonLeftInner, setTextButtonLeft] = React.useState(config.textButtonLeft);
+  const [textButtonRightInner, setTextButtonRight] = React.useState(config.textButtonRight);
 
   const toggleCalendar = () => {
     setShowCalendar(!showCalendar);
@@ -42,6 +42,44 @@ function App() {
 
   const setCloseRent = () => {
     setRentIsOpen(false);
+  };
+
+  const handleClickPickUp = () => {
+    toggleCalendar();
+    setSelectFromToDate(false);
+  };
+
+  const handleClickDropOff = () => {
+    toggleCalendar();
+    setSelectFromToDate(true);
+  };
+
+  const handleClicSelectDate = (day) => {
+    const ariaLabelValue = day.target.closest('.calendar__month-date_number').getAttribute('aria-label').split(' ');
+
+    if(selectFromToDate) {
+      const isCurrentMonth = nameMonth[textButtonLeftInner.split(' ')[1]] <= nameMonth[ariaLabelValue[2]];
+      // Изменять это поле можно, только когда выбрана дата начала аренды и число справа этого же месяца или позднее. Выбрать справа дату ранее, чем слева нельзя
+      //
+      if(((textButtonRightInner !== ariaLabelValue) && (isCurrentMonth) && (parseInt(textButtonLeftInner.split(' ')[0]) <= parseInt(ariaLabelValue[1])))
+        | ((parseInt(textButtonLeftInner.split(' ')[0]) > parseInt(ariaLabelValue[1])) && (parseInt(nameMonth[ariaLabelValue[2]]) > parseInt(nameMonth[textButtonLeftInner.split(' ')[1]])))
+      ) {
+        setTextButtonRight(ariaLabelValue[1] + ' ' + ariaLabelValue[2]);
+      }
+      setSelectFromToDate(false);
+    } else {
+      if((textButtonLeftInner !== ariaLabelValue) && (ariaLabelValue[1] !== '')) {
+        setTextButtonLeft(ariaLabelValue[1] + ' ' + ariaLabelValue[2]);
+        //
+        // Сбрасываем число справа, если новое число слева больше
+        //
+        if((parseInt(ariaLabelValue[1]) > parseInt(textButtonRightInner.split(' ')[0])) && (parseInt(nameMonth[ariaLabelValue[2]]) >= parseInt(nameMonth[textButtonRightInner.split(' ')[1]]))) {
+          setTextButtonRight(config.textButtonRight);
+        }
+      }
+      setSelectFromToDate(true);
+    }
+    toggleCalendar();
   };
 
   React.useEffect(() => {
@@ -81,15 +119,18 @@ function App() {
       <Rent
         isOpen={rentIsOpen}
         onClose={setCloseRent}
-        onClick={toggleCalendar}
+        onClickInputDataLeft={handleClickPickUp}
+        onClickInputDataRight={handleClickDropOff}
+        onClickCalendarPickUp={handleClicSelectDate}
+        onClickCalendarDropOff={handleClicSelectDate}
         showCalendar={showCalendar}
         title={config.title}
         cards={initialCards}
         subtitle={config.subtitle}
         placeHolderTextTel={config.placeHolderTextTel}
         placeHolderTextName={config.placeHolderTextName}
-        textButtonLeft={config.textButtonLeft}
-        textButtonRight={config.textButtonRight}
+        textButtonLeft={textButtonLeftInner}
+        textButtonRight={textButtonRightInner}
       />
     )}
     {rentSubjectIsOpen && (

@@ -175,7 +175,7 @@ opacity: 0;
       color: #6073d5;
     }
 
-  @media screen and (max-width: 991px) {
+  @media screen and (max-width: 1025px) {
     .mobile-navigation__form {
       width: 456px;
     }
@@ -185,42 +185,32 @@ opacity: 0;
     }
 
     .mobile-navigation__subtitle {
-      width: 456px;
+      width: 352px;
     }
 
     .mobile-navigation__data {
       width: 456px;
     }
-  }
-  
-  @media screen and (max-width: 767px) {
-    .mobile-navigation__form {
-      width: 504px;
-    }
 
-    .mobile-navigation__title {
-      width: 504px;
-    }
-
-    .mobile-navigation__subtitle {
-      width: 504px;
-    }
-
-    .mobile-navigation__data {
-      width: 504px;
+    .mobile-navigation__figure {
+      width: 456px;
     }
   }
   
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 900px) {
+    .mobile-navigation__title {
+      padding-bottom: 34px;
+    }
+  }
+  
+  @media screen and (max-width: 760px) {
     .mobile-navigation__form {
-      width: 420px;
+      width: 496px;
     }
 
     .mobile-navigation__title {
-      width: 420px;
-      margin-top: -39px;
-      padding-bottom: 16px;
-      font-size: 28px;
+      padding-top: 55px;
+      font-size: 24px;
       font-weight: 700;
       line-height: 32px;
     }
@@ -230,31 +220,38 @@ opacity: 0;
     }
 
     .mobile-navigation__data {
-      width: 420px;
+      width: 496px;
+    }
+
+    .mobile-navigation__figure {
+      width: 496px;
     }
   }
   
-  @media screen and (max-width: 520px) {
+  @media screen and (max-width: 575px) {
     .mobile-navigation__form {
-      width: 256px;
+      width: 288px;
     }
 
     .mobile-navigation__title {
       width: 256px;
-      margin-top: -39px;
-      padding-bottom: 16px;
-      font-size: 28px;
+      padding-top: 40px;
+      padding-bottom: 26px;
+      font-size: 24px;
       font-weight: 700;
       line-height: 32px;
     }
 
     .mobile-navigation__subtitle {
-      width: 256px;
+      width: 182px;
     }
 
     .mobile-navigation__data {
-      width: 256px;
-      flex-direction: column;
+      width: 288px;
+    }
+
+    .mobile-navigation__figure {
+      width: 288px;
     }
   }
   

@@ -1,75 +1,177 @@
 import CalendarDay from '../CalendarDay/CalendarDay';
 import CalendarHeader from '../CalendarHeader/CalendarHeader';
 import CalendarDate from '../CalendarDate/CalendarDate';
+import React, { useState, useEffect } from 'react';
 
+function Calendar({ onClickCalendarPickUp, onClickCalendarDropOff }) {
 
+    const nameDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+    const nameMonth = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
+        'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const monthNamesFull = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
+        'August', 'September', 'October', 'November', 'December'];      
 
-function Calendar() {
-
-    const nameDays = ['Mon', 'Thu', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+    const useWindowSize = () => {
+        const [size, setSize] = useState([window.innerWidth, window.innerHeight]);
     
+        useEffect(() => {
+        const resizeHandler = () => setSize([window.innerWidth, window.innerHeight]);
+        window.addEventListener('resize', resizeHandler);
+        return () => window.removeEventListener('resize', resizeHandler);
+        }, []);
+    
+        return size;
+    };
+    
+    const width = useWindowSize()[0];
+    const isFullWidth = width > 700;
+    const numberOfCells = 42; // 42 = 7 * 6 - это размер матрицы для календаря. 7 дней в неделе, 6 строк в сетке, итого 42 ячейки под даты на один месяц с захватом начала и конца смежных месяцев
+    const [currentDate, setCurrentDate] = useState(new Date());
+    
+    // Получаем текущий год, месяц и день
+    //
+    const year = currentDate.getFullYear();
+    const month = currentDate.getMonth();
+    //const today = currentDate.getDate();
+
+    const [currentMonth, setCurrentMonth] = useState(month);
+    const [nextMonth, setNextMonth] = useState(month+1);
+    const [currentYear, setCurrentYear] = useState(year);
+    const [nextYear, setNextYear] = useState(year);
+
+    function getCurrentMonth (numberOfCells, year, month) {
+        const firstDayOfMonth = new Date(year, month, 1).getDay(); // начиная с воскресенья
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+        const days = [];
+        for (let i = 0; i < numberOfCells; i++) {
+            if(i < firstDayOfMonth - 1) {
+                days.push(''); // Пустые слоты для дней предыдущего месяца
+            } else if(i < firstDayOfMonth -1 + daysInMonth) {
+                days.push(i - firstDayOfMonth + 2);
+            } else {
+                days.push('');
+            }
+        }
+        return days
+    }
+
+    const handleClickNextMonthButton = () => {
+        if(currentMonth === 11) {
+            setCurrentYear(currentYear + 1);
+            setCurrentMonth(0);
+        } else {
+            setCurrentMonth(currentMonth + 1);
+        }
+
+        if(nextMonth === 11) {
+            setNextYear(nextYear + 1);
+            setNextMonth(0);
+        } else {
+            setNextMonth(nextMonth + 1)
+        }
+
+      };
+
+      const handleClickPreviousMonthButton = () => {
+        if(currentMonth === 0) {
+            setCurrentMonth(11);
+            setCurrentYear(currentYear - 1);
+        } else {
+            setCurrentMonth(currentMonth - 1);
+        }
+
+        if(nextMonth === 0) {
+            setNextYear(nextYear - 1);
+            setNextMonth(11);
+        } else {
+            setNextMonth(nextMonth - 1)
+        }
+      };
+
+    const daysCurrentMonth = getCurrentMonth(numberOfCells, currentYear, currentMonth);
+    const daysNextMonth = getCurrentMonth(numberOfCells, currentYear, nextMonth);
+
     return (
-        <div className="calendar">
-            <div className="calendar__month">
-                <CalendarHeader
-                    month={"November"}
-                    year={"2023"}
-                    reverse={false}
-                />
-                <CalendarDay
-                    nameDays={nameDays}
-                />
-                <CalendarDate
-                    dates={['', '', '', '', '', '', 1]}
-                />
-                <CalendarDate
-                    dates={[2, 3, 4, 5, 6, 7, 8]}
-                />
-                <CalendarDate
-                    dates={[9, 10, 11, 12, 13, 14, 15]}
-                />
-                <CalendarDate
-                    dates={[16, 17, 18, 19, 20, 21, 22]}
-                />
-                <CalendarDate
-                    dates={[23, 24, 25, 26, 27, 28, 29]}
-                />
-                <CalendarDate
-                    dates={[30, 31, '', '', '', '', '']}
-                />
-            </div>
+    <>
+        {isFullWidth ?
+            <div className="calendar">
+                <div className="calendar__month">
+                    <CalendarHeader
+                        month={currentMonth}
+                        year={currentYear}
+                        isReverse={false}
+                        isFullWidth={isFullWidth}
+                        onClickLeft={handleClickPreviousMonthButton}
+                        onClickRight={handleClickNextMonthButton}
+                        monthNamesFull={monthNamesFull}
+                    />
 
-            <div className="calendar__month">
-                <CalendarHeader
-                    month={"December"}
-                    year={"2023"}
-                    reverse={true}
-                />
-                <CalendarDay
-                    nameDays={nameDays}
-                />
-                <CalendarDate
-                    dates={['', '', 1, 2, 3, 4, 5]}
-                />
-                <CalendarDate
-                    dates={[6, 7, 8, 9, 10, 11, 12]}
-                />
-                <CalendarDate
-                    dates={[13, 14, 15, 16, 17, 18, 19]}
-                />
-                <CalendarDate
-                    dates={[20, 21, 22, 23, 24, 25, 26]}
-                />
-                <CalendarDate
-                    dates={[27, 28, 29, 30, '', '', '']}
-                />
-                <CalendarDate
-                    dates={['', '', '', '', '', '', '']}
-                />
-            </div>
+                    <CalendarDay
+                        nameDays={nameDays}
+                    />
+                    <CalendarDate
+                        dates={daysCurrentMonth}
+                        onClick={onClickCalendarPickUp}
+                        month={currentMonth}
+                        year={currentYear}
+                        nameDays={nameDays}
+                        nameMonth={nameMonth}
+                    />
+                    
+                </div>
 
-            
-        </div>
+                <div className="calendar__month">
+                    <CalendarHeader
+                        month={nextMonth}
+                        year={nextYear}
+                        isReverse={true}
+                        isFullWidth={isFullWidth}
+                        onClickLeft={handleClickPreviousMonthButton}
+                        onClickRight={handleClickNextMonthButton}
+                        monthNamesFull={monthNamesFull}
+                    />
+                    <CalendarDay
+                        nameDays={nameDays}
+                    />
+                    <CalendarDate
+                        dates={daysNextMonth}
+                        onClick={onClickCalendarDropOff}
+                        month={nextMonth}
+                        year={nextYear}
+                        nameDays={nameDays}
+                        nameMonth={nameMonth}
+                    />
+                </div>
+            </div>
+            :
+            <div className="calendar__restrict">
+                <div className="calendar__month-restrict">
+                    <CalendarHeader
+                        month={currentMonth}
+                        year={currentYear}
+                        isReverse={false}
+                        isFullWidth={isFullWidth}
+                        onClickLeft={handleClickPreviousMonthButton}
+                        onClickRight={handleClickNextMonthButton}
+                        monthNamesFull={monthNamesFull}
+                    />
+
+                    <CalendarDay
+                        nameDays={nameDays}
+                    />
+                    <CalendarDate
+                        dates={daysCurrentMonth}
+                        onClick={onClickCalendarPickUp}
+                        month={currentMonth}
+                        year={currentYear}
+                        nameDays={nameDays}
+                        nameMonth={nameMonth}
+                    />
+                </div>
+            </div>
+        }
+
+    </>
     );
 }
 

@@ -5,7 +5,8 @@ import MobileNavigation from '../MobileNavigation/MobileNavigation';
 function Rent({
   isOpen,
   onClose,
-  onClick,
+  onClickInputDataLeft,
+  onClickInputDataRight,
   title,
   subtitle,
   placeHolderTextTel,
@@ -14,6 +15,8 @@ function Rent({
   textButtonRight,
   showCalendar,
   cards,
+  onClickCalendarPickUp,
+  onClickCalendarDropOff,
 }) {
 
   return (
@@ -26,7 +29,11 @@ function Rent({
           cards={cards}
           title={title}
           subtitle={subtitle}
-          onClick={onClick}
+          //onClick={onClick}
+          onClickInputDataLeft={onClickInputDataLeft}
+          onClickInputDataRight={onClickInputDataRight}
+          onClickCalendarPickUp={onClickCalendarPickUp}
+          onClickCalendarDropOff={onClickCalendarDropOff}
           showCalendar={showCalendar}
           placeHolderTextTel={placeHolderTextTel}
           placeHolderTextName={placeHolderTextName}

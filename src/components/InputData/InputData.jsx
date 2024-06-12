@@ -11,15 +11,3 @@ function InputData({ InputDataText, onClick }) {
 }
 
 export default InputData;
-
-
-
-
-
-
-
-
-
-
-
-

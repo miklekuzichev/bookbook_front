@@ -8,4 +8,16 @@
     line-height: 20px;
     font-weight: 400;
   }
+
+  @media screen and (max-width: 1025px) {
+    .mobile-navigation__input-text {
+      padding: 21px 0 12px 0;
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    .mobile-navigation__input-text {
+      line-height: 24px;
+    }
+  }
   

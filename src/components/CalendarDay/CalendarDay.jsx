@@ -12,4 +12,3 @@ function CalendarDay({ nameDays }) {
 }
 
 export default CalendarDay;
-

@@ -1,11 +1,12 @@
 import React from 'react';
+//import debounce from 'lodash.debounce'; // применить метод отсечения вызовов (debouncing) для улучшения производительности
 import { NavLink } from 'react-router-dom';
 import ButtonPopupSubmit from '../ButtonPopupSubmit/ButtonPopupSubmit';
 import InputPopup from '../InputPopup/InputPopup';
 import InputData from '../InputData/InputData';
 import Calendar from '../Calendar/Calendar';
 
-const MobileNavigation = React.memo(({ cards, title, subtitle, onClick, placeHolderTextTel, placeHolderTextName, textButtonLeft, textButtonRight, showCalendar }) => {
+const MobileNavigation = React.memo(({ onClickCalendarPickUp, onClickCalendarDropOff, cards, title, subtitle, onClickInputDataLeft, onClickInputDataRight, placeHolderTextTel, placeHolderTextName, textButtonLeft, textButtonRight, showCalendar }) => {
 
   return (
     <div className="mobile-navigation">
@@ -19,10 +20,11 @@ const MobileNavigation = React.memo(({ cards, title, subtitle, onClick, placeHol
           <div className="mobile-navigation__data">
             <InputData
               InputDataText={ textButtonLeft }
-              onClick={ onClick }
+              onClick={ onClickInputDataLeft }
             />
             <InputData
               InputDataText={ textButtonRight }
+              onClick={ onClickInputDataRight }
             />
           </div>
           <InputPopup
@@ -34,15 +36,16 @@ const MobileNavigation = React.memo(({ cards, title, subtitle, onClick, placeHol
             typeInput="tel"
           />
           <p className="mobile-navigation__input-text">Total: <label className="mobile-navigation__input-text_summary">20 EUR</label></p>
-          <p className="mobile-navigation__text-oferta">Нажимая кнопку "Оформить" Вы соглашаетесь с обработкой<br/><NavLink className="mobile-navigation__text-oferta_link">персональных данных</NavLink> и <NavLink className="mobile-navigation__text-oferta_link">договором оферты</NavLink></p>
+          <p className="mobile-navigation__text-oferta">Нажимая кнопку "Оформить" Вы соглашаетесь с обработкой <NavLink className="mobile-navigation__text-oferta_link">персональных данных</NavLink> и <NavLink className="mobile-navigation__text-oferta_link">договором оферты</NavLink></p>
           <ButtonPopupSubmit
           />
         </form>
       </ul>
-      {showCalendar && 
-      <Calendar
-      
-      />
+      {showCalendar ?
+        <Calendar
+          onClickCalendarPickUp={ onClickCalendarPickUp }
+          onClickCalendarDropOff={ onClickCalendarDropOff }
+        />  : <></>
       }
     </div>
   )
